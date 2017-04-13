@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint Coredata.podspec' to ensure this is a
+#  Be sure to run `pod spec lint TestCoreData.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
@@ -15,16 +15,27 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "Coredata"
+  s.name         = "TestCoreData"
   s.version      = "0.0.1"
-  s.summary      = "A short description of Coredata."
+  s.summary      = "just for test coredata"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = "测试一下description"
+  s.description  = <<-DESC
+                   Kingfisher is a lightweight and pure Swift implemented library for downloading and cacheing image from the web. It provides you a chance to use pure Swift alternation in your next app.
+
+                   * Everything in Kingfisher goes asynchronously, not only downloading, but also caching. That means you can never worry about blocking your UI thread.
+                   * Multiple-layer cache. Downloaded image will be cached in both memory and disk. So there is no need to download it again and this could boost your app dramatically.
+                   * Cache management. You can set the max duration or size the cache could take. And the cache will also be cleaned automatically to prevent taking too much resource.
+                   * Modern framework. Kingfisher uses `NSURLSession` and the latest technology of GCD, which makes it a strong and swift framework. It also provides you easy APIs to use.
+                   * Cancellable processing task. You can cancel the downloading or retriving image process if it is not needed anymore.
+                   * Independent components. You can use the downloader or caching system separately. Or even create your own cache based on Kingfisher's code.
+                   * Options to decompress the image in background before render it, which could improve the UI performance.
+                   * A category over `UIImageView` for setting image from an url directly.
+                   DESC
 
   s.homepage     = "https://github.com/jimmy808126/CoreData"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -37,8 +48,8 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  #s.license      = "MIT (example)"
+  s.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -65,6 +76,7 @@ Pod::Spec.new do |s|
   # s.platform     = :ios
   # s.platform     = :ios, "5.0"
 
+  s.ios.deployment_target = "8.0"
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
   # s.osx.deployment_target = "10.7"
@@ -90,6 +102,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "Classes"
+  s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
